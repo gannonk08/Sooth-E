@@ -14,5 +14,10 @@ router.get('/', function (req, res, next) {
     }
   });
 });
+router.get('/map', function (req, res, next) {
+  const renderObject = {};
+  renderObject.title = 'Maps';
+  res.render('map', renderObject);
+});
 
 module.exports = router;
