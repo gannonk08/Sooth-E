@@ -19,5 +19,10 @@ router.get('/map', function (req, res, next) {
   renderObject.title = 'Maps';
   res.render('map', renderObject);
 });
+router.get('/test', function (req, res, next) {
+  const renderObject = {};
+  renderObject.title = 'Test Heat';
+  res.render('test_heat', renderObject);
+});
 
 module.exports = router;
