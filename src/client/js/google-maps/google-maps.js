@@ -26,7 +26,8 @@ L.control.scale().addTo(map);
 // Edit file name of the GeoJson map data to be uploaded from your local directory
 $.getJSON("../../data/zillow-neighborhoods.geojson", function (data) {
   var geoJsonLayer = L.geoJson(data, {
-    style: function (feature) {      if(feature.properties.COUNTY === "Denver") {
+    style: function (feature) {
+      if(feature.properties.COUNTY === "Denver") {
       var fillColor,
         level = feature.properties.NAME;
         var neighborhoodArray = []
@@ -49,6 +50,8 @@ $.getJSON("../../data/zillow-neighborhoods.geojson", function (data) {
     }
   }).addTo(map);
 });
+
+
 
 
 var legend = L.control({position: 'bottomright'});
